@@ -7,6 +7,8 @@ from .models import Music
 
 from rest_framework import status
 
+# from backend.music import serializers
+
 
 @api_view(['GET','POST'])
 def music_list(request) :
@@ -23,5 +25,17 @@ def music_list(request) :
         return Response(serializer.data, status = status.HTTP_201_CREATED)
 
 
+@api_view(['GET'])
+def music_list(request, pk) :
 
+    try :
+        music = Music.objects.get(pk=pk)
+        #print(pk)
+        #return Response(pk)
+    
+        serializer = MusicSerializer(music)
+        return Response(serializer.data)
+    
+    except Music.DoesNotExist:
+        return Response(status = status.HTTP_404_NOT_FOUND)
     
