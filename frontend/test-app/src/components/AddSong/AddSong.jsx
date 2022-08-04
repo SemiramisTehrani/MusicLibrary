@@ -12,6 +12,8 @@ const AddSong = (props) => {
     const [songAlbum, setAlbum] = useState(''); 
     const [releaseDate, setReleaseDate] = useState(''); 
     const [songGenre, setGenre] = useState(''); 
+    const [songLikeStatus, setLikeStatus] = useState(''); 
+
 
 
 
@@ -23,7 +25,8 @@ const AddSong = (props) => {
             "artist": songArtist,
             "album": songAlbum,
             "release_date": releaseDate,
-            "genre": songGenre
+            "genre": songGenre,
+            "like_status" : songLikeStatus
         }
         
         props.addNewSong(newSong);
@@ -33,6 +36,7 @@ const AddSong = (props) => {
         setAlbum(""); 
         setReleaseDate("");  
         setGenre("");
+        setLikeStatus("");
 
     }
 
@@ -63,6 +67,10 @@ const AddSong = (props) => {
                     <div>
                         <label className='form-label' htmlFor = 'Genre'>Genre:</label>
                         <input type = 'text' name = 'Genre' placeholder = 'Genre' value = {songGenre} onChange={(event) => setGenre(event.target.value)}/>
+                    </div>
+                    <div>
+                        <label className='form-label' htmlFor = 'Like'>Like Status:</label>
+                        <input type = 'number' name = 'Like' placeholder = 'like Status' value = {songLikeStatus} onChange={(event) => setLikeStatus(event.target.value)}/>
                     </div>
                 </div> 
                 <div className='button-contain'> 
