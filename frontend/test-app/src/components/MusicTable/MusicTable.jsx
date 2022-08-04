@@ -27,6 +27,7 @@ const MusicTable = (props) => {
                 <th>Album</th>            
                 <th>Release Date</th>
                 <th>Genre</th>
+                <th>Like Status</th>
             </tr>
         </thead>
         <tbody>
@@ -46,6 +47,7 @@ const MusicTable = (props) => {
                     <td>{song.album}</td>
                     <td>{song.release_date}</td>
                     <td>{song.genre}</td>
+                    <td>{song.like_status}</td>
                 </tr>
             )
             })}

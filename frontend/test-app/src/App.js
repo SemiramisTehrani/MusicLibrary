@@ -18,11 +18,11 @@ function App() {
       setSongs(response.data)
   }
     async function addSong(newSong){
-      let response = await axios.post('http://127.0.0.1:8000/api/music/', newSong);
+      const response = await axios.post('http://127.0.0.1:8000/api/music/', newSong);
       if(response.status === 201){
       await getAllSongs();
     }
-  } 
+  }
 
   return (
     <div className='page-container'>
