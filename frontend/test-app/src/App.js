@@ -4,6 +4,8 @@ import axios from 'axios'
 import MusicTable from './components/MusicTable/MusicTable';
 import AddSong from './components/AddSong/AddSong';
 import NavBar from './components/SearchBar/SearchBar.jsx';
+// import image from './components/images/picture.png';
+
 // bonus part : update , delete song
 import UpdateSong from './components/UpdateSong/UpdateSong';
 import DeleteSong from './components/DeleteSong/DeleteSong'

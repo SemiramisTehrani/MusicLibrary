@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./AddSong.css";
+//import image from './components/Images/picture.png';
 // import { nanoid } from "nanoid";
 
 
@@ -76,7 +77,7 @@ const AddSong = (props) => {
                 <div className='button-contain'> 
                     <div>
                         <button type = 'submit' className='add-button'>Add Song</button> 
-                    </div>
+                    </div>                    
                 </div>  
             </form>
         </div>
