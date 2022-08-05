@@ -39,7 +39,7 @@ create-container {
   
   .add-button {
     border: solid rgb(245, 247, 248);
-    background-color: rgb(113, 114, 163);
+    background-color: rgb(158, 108, 158);
     font-weight: bold;
     border-radius: 10px;
   }

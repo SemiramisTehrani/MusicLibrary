@@ -49,7 +49,7 @@
   
   .header-row {
     color: rgb(19, 20, 26);
-    background-color: rgb(47, 84, 163);
+    background-color: rgb(84, 169, 168);
   }
   
   .header-row th {
@@ -58,7 +58,7 @@
   }
   
   .display-rows {
-    background-color: rgb(149, 161, 231);
+    background-color: rgb(149, 189, 231);
   }
   
   .display-rows td {
