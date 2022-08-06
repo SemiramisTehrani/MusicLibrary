@@ -54,4 +54,4 @@ return(
     </>
 );
 
-
+export default DeleteSong;
