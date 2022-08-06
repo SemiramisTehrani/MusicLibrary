@@ -16,7 +16,7 @@ const MusicTable = (props) => {
             </div>
             <div className = 'search-filter'>
                 <label className='search-label'>Filter Song List:</label>
-                <input type='text' className='custom-input' placeholder="Search...(e.g. Pop music)" onChange={(event) => setSearchTerm(event.target.value)}/>
+                <input type='text' className='custom-input' placeholder="Search...(e.g. pop)" onChange={(event) => setSearchTerm(event.target.value)}/>
             </div>
         </div>
         

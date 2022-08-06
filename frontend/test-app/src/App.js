@@ -10,6 +10,9 @@ import NavBar from './components/SearchBar/SearchBar.jsx';
 import UpdateSong from './components/UpdateSong/UpdateSong';
 import DeleteSong from './components/DeleteSong/DeleteSong'
 
+import Model from "react-bootstrap/Model";
+import Button from "react-bootstrap/Button";
+
 
 
 function App() {
@@ -31,18 +34,18 @@ function App() {
     }
   }
     // bonus part : delete song (Delete in postman)
-    async function deletesong(){ 
-      let response = await axios.delete("http://127.0.0.1:8000/api/music/");
-    // console.log(response.data);
-      setSongs(response.data)
+    async function makeDeleteRequest(){ 
+      try {
+      let response = await axios.delete('http://127.0.0.1:8000/api/music/${songIdproperty}');
+      alert("Song deleted")
+      props.getAllSongs()
+      }
+      catch (ex){
+        alert("Error. Song not deleted. Please try again.");
+    }
   }
 
     // bonus part : update song (put im postman)
-    async function updatesong(){ 
-      let response = await axios.put("http://127.0.0.1:8000/api/music/");
-      // console.log(response.data);
-      setSongs(response.data)
-  }
 
   return (
     <div className='page-container'>
